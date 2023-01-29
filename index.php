@@ -11,7 +11,9 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
-        <textarea id="copyarea" title="Text to copy">SUSSSY BAKA N</textarea>
+        <textarea id="copyarea" title="Text to copy"><?php
+            echo $_GET['text']; 
+         ?></textarea>
         <span id="copyspan" style="display: none;"></span>
         <button class="btn btn-outline-success" id="copybtn" title="Copy"><i class="bi bi-clipboard"></i></button>
     </body>
