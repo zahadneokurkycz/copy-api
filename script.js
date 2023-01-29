@@ -25,11 +25,11 @@ document.getElementById('copyarea').innerHTML = document.getElementById('copyspa
 document.getElementById("copybtn")
 .onclick = function() {
     let text = 'sussy baka'
-navigator.clipboard.writeText(text)
-.then(() => {
-    alert('Text copied to clipboard');
-})
-.catch(err => {
-    alert('Error in copying text: ', err);
-});
+    navigator.clipboard.writeText(text)
+    .then(() => {
+        alert('Text copied to clipboard');
+    })
+    .catch(err => {
+        alert('Error in copying text: ', err);
+    });
 }
