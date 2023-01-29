@@ -1,5 +1,4 @@
 var pole = location.search.substring(1).split('&'); 
-var copybtn = document.getElementById('copybtn');
 var httpGetVars = new Array(); 
 
 for(i = 0; i < pole.length; i++){
@@ -8,26 +7,26 @@ for(i = 0; i < pole.length; i++){
 
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
 
-/*document.getElementById("copybtn")
+document.getElementById('copybtn')
 .onclick = function() {
-    let text = document.getElementById("copyarea").value;
-    navigator.clipboard.writeText(text)
-    .then(() => {
-        alert('Text copied to clipboard');
-    })
-    .catch(err => {
-        alert('Error in copying text: ', err);
+    navigator.clipboard.writeText("This is the text to be copied").then(() => {
+        alert('Content copied to clipboard');
+        /* Resolved - text copied to clipboard successfully */
+    },() => {
+        alert('Failed to copy');
+        /* Rejected - text failed to copy to the clipboard */
     });
-}*/
 
-document.getElementById("copybtn")
-.onclick = function() {
-    let text = 'sussy baka'
-    navigator.clipboard.writeText(text)
-    .then(() => {
-        alert('Text copied to clipboard');
-    })
-    .catch(err => {
-        alert('Error in copying text: ', err);
+    navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+        if (result.state == "granted" || result.state == "prompt") {
+
+            navigator.clipboard.writeText("This is the text to be copied").then(() => {
+                alert('Text successfully copied to clipboard');
+                /* Resolved - text copied to clipboard successfully */
+            },() => {
+                alert('Failed to copy');
+                /* Rejected - text failed to copy to the clipboard */
+            });
+        }
     });
 }

@@ -11,20 +11,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
-        <script>
-            navigator.clipboard.writeText("This is the text to be copied").then(() => {
-                alert('Content copied to clipboard');
-                /* Resolved - text copied to clipboard successfully */
-            },() => {
-                alert('Failed to copy');
-                /* Rejected - text failed to copy to the clipboard */
-            });
-
-            navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
-                if (result.state == "granted" || result.state == "prompt") {
-                    alert("Write access granted!");
-                }
-            });
-        </script>
+        <button type="button" id="copybtn">sus</button>
     </body>
 </html>
