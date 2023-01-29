@@ -22,7 +22,9 @@ document.getElementById('copyarea').innerHTML = document.getElementById('copyspa
     });
 }*/
 
-let text = 'sussy baka'
+document.getElementById("copybtn")
+.onclick = function() {
+    let text = 'sussy baka'
 navigator.clipboard.writeText(text)
 .then(() => {
     alert('Text copied to clipboard');
@@ -30,3 +32,4 @@ navigator.clipboard.writeText(text)
 .catch(err => {
     alert('Error in copying text: ', err);
 });
+}
