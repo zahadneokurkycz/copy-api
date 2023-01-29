@@ -7,8 +7,7 @@ for(i = 0; i < pole.length; i++){
 
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
 
-document.getElementById('copybtn')
-.onclick = function() {
+function copy() {
     navigator.clipboard.writeText("This is the text to be copied").then(() => {
         alert('Content copied to clipboard');
         /* Resolved - text copied to clipboard successfully */
