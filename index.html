@@ -11,20 +11,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
-        <textarea id="textId" title="Text to copy" hidden>SUSSSY BAKA N</textarea>
-        <button class="btn btn-outline-success" id="copyBtn" title="Copy"><i class="bi bi-clipboard"></i></button>
-        <script>
-        document.getElementById("copyBtn")
-        .onclick = function() {
-            let text = document.getElementById("textId").value;
-            navigator.clipboard.writeText(text)
-            .then(() => {
-                alert('Text copied to clipboard');
-            })
-            .catch(err => {
-                alert('Error in copying text: ', err);
-            });
-        }
-        </script>
+        <textarea id="copyarea" title="Text to copy" hidden>SUSSSY BAKA N</textarea>
+        <button class="btn btn-outline-success" id="copybtn" title="Copy"><i class="bi bi-clipboard"></i></button>
     </body>
 </html>
