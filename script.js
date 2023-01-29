@@ -7,8 +7,6 @@ for(i = 0; i < pole.length; i++){
 }
 
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
-document.getElementById('copyspan').innerHTML = httpGetVars['text'];
-document.getElementById('copyarea').innerHTML = document.getElementById('copyspan').innerHTML;
 
 /*document.getElementById("copybtn")
 .onclick = function() {
