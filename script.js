@@ -8,14 +8,6 @@ for(i = 0; i < pole.length; i++){
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
 
 function copy() {
-    navigator.clipboard.writeText("This is the text to be copied").then(() => {
-        alert('Content copied to clipboard');
-        /* Resolved - text copied to clipboard successfully */
-    },() => {
-        alert('Failed to copy');
-        /* Rejected - text failed to copy to the clipboard */
-    });
-
     navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
         if (result.state == "granted" || result.state == "prompt") {
 
