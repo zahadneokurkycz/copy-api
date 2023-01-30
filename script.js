@@ -42,7 +42,3 @@ function btnpaste() {
     document.body.appendChild(btn);
 }
 
-/*if (httpGetVars['outline'] == 'true') {
-    document.getElementById('copybtn').classList = 'btn ';
-    document.getElementById('copybtn').classList += 'btn-outline-success';
-}*/
