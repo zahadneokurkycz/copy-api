@@ -7,7 +7,7 @@ for(i = 0; i < pole.length; i++){
 
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
 
-if (httpGetVars['outline'] == true) {
+if (httpGetVars['outline'] == 'true') {
     document.getElementById('copybtn').classList = 'btn ';
     document.getElementById('copybtn').classList += 'btn-outline-success'
 }
