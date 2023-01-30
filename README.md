@@ -19,7 +19,12 @@ https://zahadneokurkycz.github.io/copy-api/
 
 - Add `&text=` and text that you want to be copied to the url
 
-- And finnaly
+- And finnaly add `&outline=` and choose one from options: `true` (if
+you want button to be in outline style) or `false` if you want classic style.
 
+- The final address should look like this:
+```
+https://zahadneokurkycz.github.io/copy-api/?theme=dark&text=Text-to-copy&outline=true
+```
 
-https://zahadneokurkycz.github.io/copy-api/?theme=dark&text=SUsUYBAKSBJ&outline=true
+4) Replace `file.html` in the `src` attribute with your url adress
