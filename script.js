@@ -14,11 +14,15 @@ function copy() {
 
             navigator.clipboard.writeText(httpGetVars['text']).then(() => {
                 document.getElementById('copybtn').innerHTML = '<i class="bi bi-clipboard-check-fill"></i>';
-                setTimeout('document.getElementById("copybtn") = "<i class="bi bi-clipboard"></i>";', 3 * 1000);
+                setTimeout('changeback();', 3 * 1000);
             },() => {
                 alert('Failed to copy');
                 /* Rejected - text failed to copy to the clipboard */
             });
         }
     });
+}
+
+function changeback() {
+    
 }
