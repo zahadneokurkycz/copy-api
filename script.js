@@ -11,7 +11,7 @@ function copy() {
     navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
         if (result.state == "granted" || result.state == "prompt") {
 
-            navigator.clipboard.writeText("This is the text to be copied").then(() => {
+            navigator.clipboard.writeText(httpGetVars['text']).then(() => {
                 document.getElementById('copybtn').innerHTML = '<i class="bi bi-clipboard-check-fill"></i>';
             },() => {
                 alert('Failed to copy');
