@@ -39,7 +39,7 @@ if (httpGetVars['outline'] == 'true') {
 }
 document.body.appendChild(btn);
 
-if (httpGetVars['outline'] == 'true') {
+/*if (httpGetVars['outline'] == 'true') {
     document.getElementById('copybtn').classList = 'btn ';
     document.getElementById('copybtn').classList += 'btn-outline-success';
-}
+}*/
