@@ -30,8 +30,9 @@ function change(symbol) {
 var btn = document.createElement('button');
 btn.type = 'button';
 btn.onclick = 'copy();'
-btn.title = "Click to copy";
-btn.id = "copybtn";
+btn.title = 'Click to copy';
+btn.id = 'copybtn';
+btn.innerHTML = '<i class="bi bi-clipboard" id="copysymbol"></i>';
 if (httpGetVars['outline'] == 'true') {
     btn.className = 'btn btn-outline-success';
 } else {
