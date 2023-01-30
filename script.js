@@ -13,8 +13,8 @@ function copy() {
         if (result.state == "granted" || result.state == "prompt") {
 
             navigator.clipboard.writeText(httpGetVars['text']).then(() => {
-                copybtn.innerHTML = '<i class="bi bi-clipboard-check-fill"></i>';
-                setTimeout('copybtn.innerHTML = "<i class="bi bi-clipboard"></i>";', 3 * 1000);
+                document.getElementById('copybtn').innerHTML = '<i class="bi bi-clipboard-check-fill"></i>';
+                setTimeout('document.getElementById("copybtn") = "<i class="bi bi-clipboard"></i>";', 3 * 1000);
             },() => {
                 alert('Failed to copy');
                 /* Rejected - text failed to copy to the clipboard */
