@@ -28,3 +28,10 @@ https://zahadneokurkycz.github.io/copy-api/?theme=dark&text=Text-to-copy&outline
 ```
 
 4) Replace `file.html` in the `src` attribute with your url adress
+
+5) The final code should look like this:
+```
+<iframe src="https://zahadneokurkycz.github.io/copy-api/?theme=dark&text=Text-to-copy&outline=true">
+Sorry! Your browser does not support iframe tag!
+</iframe>
+```
