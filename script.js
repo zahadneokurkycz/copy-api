@@ -12,8 +12,7 @@ function copy() {
         if (result.state == "granted" || result.state == "prompt") {
 
             navigator.clipboard.writeText("This is the text to be copied").then(() => {
-                alert('Text successfully copied to clipboard');
-                /* Resolved - text copied to clipboard successfully */
+                document.getElementById('copybtn').innerHTML = '<i class="bi bi-clipboard-check-fill"></i>';
             },() => {
                 alert('Failed to copy');
                 /* Rejected - text failed to copy to the clipboard */
