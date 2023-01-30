@@ -27,18 +27,20 @@ function change(symbol) {
     document.getElementById('copysymbol').classList += 'bi-' + symbol;
 }
 
-var btn = document.createElement('button');
-btn.type = 'button';
-btn.onclick = 'copy();'
-btn.title = 'Click to copy';
-btn.id = 'copybtn';
-btn.innerHTML = '<i class="bi bi-clipboard" id="copysymbol"></i>';
-if (httpGetVars['outline'] == 'true') {
-    btn.className = 'btn btn-outline-success';
-} else {
-    btn.className = 'btn btn-success';
+function btnpaste() {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.onclick = 'copy();'
+    btn.title = 'Click to copy';
+    btn.id = 'copybtn';
+    btn.innerHTML = '<i class="bi bi-clipboard" id="copysymbol"></i>';
+    if (httpGetVars['outline'] == 'true') {
+        btn.className = 'btn btn-outline-success';
+    } else {
+        btn.className = 'btn btn-success';
+    }
+    document.body.appendChild(btn);
 }
-document.body.appendChild(btn);
 
 /*if (httpGetVars['outline'] == 'true') {
     document.getElementById('copybtn').classList = 'btn ';
