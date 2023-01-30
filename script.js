@@ -7,6 +7,11 @@ for(i = 0; i < pole.length; i++){
 
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
 
+if (httpGetVars['outline'] == true) {
+    document.getElementById('copybtn').classList = 'btn ';
+    document.getElementById('copybtn').classList += 'btn-outline-success'
+}
+
 function copy() {
     navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
         if (result.state == "granted" || result.state == "prompt") {
