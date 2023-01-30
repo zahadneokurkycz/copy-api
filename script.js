@@ -41,3 +41,5 @@ function btnpaste() {
     }
     document.body.appendChild(btn);
 }
+
+document.getElementById("copybtn").addEventListener("click", copy);
