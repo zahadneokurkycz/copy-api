@@ -42,3 +42,4 @@ function btnpaste() {
     document.body.appendChild(btn);
 }
 
+btnpaste();
