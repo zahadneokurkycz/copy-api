@@ -4,7 +4,9 @@
 1) Make a classic iframe:
 
 ```
-<iframe 
+<iframe src="file.html">
+Sorry! Your browser does not support iframe tag!
+</iframe>
 ```
 
 
