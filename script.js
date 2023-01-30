@@ -7,11 +7,6 @@ for(i = 0; i < pole.length; i++){
 
 document.documentElement.setAttribute('data-bs-theme', httpGetVars['theme']);
 
-if (httpGetVars['outline'] == 'true') {
-    document.getElementById('copybtn').className = 'btn btn-outline-success';
-    //document.getElementById('copybtn').classList += 'btn-outline-success'
-}
-
 function copy() {
     navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
         if (result.state == "granted" || result.state == "prompt") {
@@ -30,4 +25,9 @@ function copy() {
 function change(symbol) {
     document.getElementById('copysymbol').classList = 'bi ';
     document.getElementById('copysymbol').classList += 'bi-' + symbol;
+}
+
+if (httpGetVars['outline'] == 'true') {
+    document.getElementById('copybtn').classList = 'btn ';
+    document.getElementById('copybtn').classList += 'btn-outline-success';
 }
