@@ -18,7 +18,7 @@ function copy() {
 
             navigator.clipboard.writeText(httpGetVars['text']).then(() => {
                 change('clipboard-check-fill');
-                setTimeout("change('clipboard');", 3 * 1000);
+                setTimeout("change('clipboard');", 1500);
             },() => {
                 alert('Failed to copy');
                 /* Rejected - text failed to copy to the clipboard */
